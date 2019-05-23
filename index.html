@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/vienna_logo_only.png">
+
+    <title>Vienna</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="css/plyr.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+
+    <main role="main" class="container-fluid">
+      <div id="top-section" class="container-fluid">
+        <div id="hero-section" class="row justify-content-center">
+          <div class="col-sm-12 col-md-10 col-lg-8">
+            <div class="hero-logo">
+              <img class="wow fadeInDown" src="img/vienna_logo_only.png" alt=""/>
+            </div>
+            <h1 class="wow fadeInUp" data-wow-delay=".5s">Make Remote Feel Local</h1>
+            <h3 class="wow fadeInUp" data-wow-delay="1s">Build your remote culture and keep your team in sync with async video stand-ups</h3>
+            <div class="scroll-section">
+              <div class="scroll-icon wow fadeIn" data-wow-delay="1.2s">
+                <img class="scroll-arrow bouncing" src="img/scroll_icon.png">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-sm-12 col-md-10 col-lg-8">
+            <div class="row">
+              <div class="col-sm-12 col-md-4 section-2-col wow fadeIn" data-wow-delay=".5s">
+                <img src="img/sync_img.png">
+                <h3>Sync up on Schedule</h3>
+                <p>Vienna runs virtual stand-ups with short video clips</p>
+              </div>
+              <div class="col-sm-12 col-md-4 section-2-col wow fadeIn" data-wow-delay="1s">
+                <img src="img/safe_img.png">
+                <h3>Safe and Secure</h3>
+                <p>Videos are private to thier #channel and expire after 7 days</p>
+              </div>
+              <div class="col-sm-12 col-md-4 section-2-col wow fadeIn" data-wow-delay="1.5s">
+                <img src="img/runs_img.png">
+                <h3>Safe and Secure</h3>
+                <p>Get started quickly by meeting your team where they are</p>
+              </div>
+            </div>
+            <div class="row justify-content-center my-5">
+              <div class="col-12 text-center">
+                <a href="#" class="slack-btn wow fadeInUp" data-wow-delay="1s">
+                  <img src="img/add_to_slack_btn.png" alt="Slack button">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="video-section" class="container-fluid">
+        <div class="row justify-content-center py-5">
+          <div class="col-8 video-col wow fadeIn" data-wow-delay="1.5s" data-wow-duration=".5s">
+            <video controls crossorigin playsinline poster="img/video_poster.png" id="player">
+                <!-- Video files -->
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440">
+
+                <!-- Fallback for browsers that don't support the <video> element -->
+                <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+            </video>
+          </div>
+        </div>
+      </div>
+    </main><!-- /.container -->
+    <footer>
+      <div id="footer" class="container-fluid">
+        <div class="row justify-content-center no-gutter">
+          <div class="col-sm-12 col-md-10">
+            <div class="row">
+              <div class="col-sm-12 col-md-8 align-self-center">
+                <ul class="footer-links">
+                  <li>Copyright © 2019  Vienna. All rights reserved</li>
+                  <li><a href="#">Terms of Use</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-12 col-md-4 align-self-center text-right">
+                <ul class="footer-social">
+                  <li class="wow fadeInUp" data-wow-delay=".3s"><a href=""><img src="img/fb_icon.png" alt="Facebook"></a></li>
+                  <li class="wow fadeInUp" data-wow-delay=".6s"><a href=""><img src="img/twitter_icon.png" alt="Twitter"></a></li>
+                  <li class="wow fadeInUp" data-wow-delay=".9s"><a href=""><img src="img/yt_icon.png" alt="YouTube"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="js/plyr.polyfilled.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
