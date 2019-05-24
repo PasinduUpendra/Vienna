@@ -1,4 +1,7 @@
-new WOW().init();
+new WOW({
+mobile:       false
+
+}).init();
 const player = new Plyr('#player');
 $(function () {
   'use strict'

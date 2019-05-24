@@ -675,6 +675,9 @@ img {
     max-width: 137px;
     margin: 0 auto;
   }
+  .wow {
+    visibility: visible;
+  }
 }
 
 /************ Small devices (landscape phones, 576px and up) ************/
