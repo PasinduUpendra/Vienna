@@ -87,6 +87,12 @@ img {
 }
 
 /************ Nav *************/
+#main-nav {
+  background: #fff;
+}
+.navbar .container-fluid {
+    padding: 0 3rem;
+}
 .navbar-brand {
     margin-right: 3rem;
 }
@@ -130,6 +136,9 @@ img {
   html,
   body {
     overflow-x: hidden; /* Prevent scroll on narrow devices */
+  }
+  .navbar .container-fluid {
+    padding: 0rem;
   }
   .offcanvas-collapse {
     position: fixed;
@@ -390,9 +399,7 @@ img {
     border: 10px solid #f0f3f3;
     border-radius: 110px;
 }
-.recording-btn {
-    margin-right: -8px;
-}
+
 
 /********* Recording *********/
 .rocrding-container {
@@ -414,6 +421,9 @@ img {
 }
 .btn-record:hover, .btn-restart:hover {
   color: #fff;
+}
+.recording-btn {
+    margin-right: -8px;
 }
 .btn-restart {
     margin-right: 0;
@@ -477,6 +487,116 @@ img {
 .recording-ques ul li span{
   color: #616d76;
 }
+
+/********** Survey ************/
+#survey {
+  background: url(../img/survey_bg.png);
+  overflow: hidden;
+}
+#survey-section {
+    background: #fff;
+    min-height: 75vh;
+    margin: 5rem 0;
+    padding: 4rem;
+    border-radius: 60px;
+    border: none;
+    -webkit-box-shadow: 0 5px 35px 0 rgba(0,0,0,.2);
+    box-shadow: 0 5px 35px 0 rgba(0,0,0,.2);
+}
+#survey-section .progress {
+    position: relative;
+    height: 3rem;
+    border-radius: 50px;
+    background: #ebf6f9;
+    -webkit-box-shadow:inset 0 2px 10px 1px rgba(0,0,0,.09);
+    box-shadow:inset 0 2px 10px 1px rgba(0,0,0,.09);
+}
+#survey-section .progress-bar {
+    background: #37e398;
+}
+.progress-border {
+    padding: .8rem;
+    border: 7px solid #fbfbfb;
+    border-radius: 60px;
+}
+.progress-txt {
+    position: absolute;
+    top: .8rem;
+    left: 3rem;
+    color: #90fdcd;
+    font-weight: 600;
+    letter-spacing: .5px;
+    font-size: 1rem;
+}
+.survey-txt {
+    margin: 2rem;
+    text-align: center;
+}
+.survey-txt h4 {
+    color: #494e52;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+.survey-txt p {
+    color: #778d9d;
+    padding: 0 3rem;
+    letter-spacing: .3px;
+}
+.survey-skip {
+    text-align: center;
+    margin-top: 2rem;
+}
+.skip-btn {
+    font-size: 14px;
+    border-radius: 50px;
+    padding: .5rem 4rem;
+    border-width: 2px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    color: #7acbe2;
+    border-color: #7acbe2;
+} 
+.skip-btn:hover {
+  background: #7acbe2;
+  border-color: #7acbe2;
+}
+.survey-icons {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+#survey-options .col {
+    text-align: center;
+    cursor: pointer;
+}
+#survey-options img {
+    max-width: 75%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    margin-bottom: 1rem;
+    -webkit-transition: all 300ms ease-in;
+    transition: all 300ms ease-in;
+}
+#survey-options h5 {
+    color: #494e52;
+    font-weight: 700;
+    letter-spacing: .5px;
+    -webkit-transition: all 300ms ease-in;
+    transition: all 300ms ease-in;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+#survey-options {
+    max-width: 80%;
+    margin: 0 auto;
+}
+#survey-options .col:hover h5 {
+    color: #fbb72a;
+}
+#survey-options .col:hover img {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
 /************  Extra small devices (portrait phones, less than 576px) ************/
 @media (max-width: 575.98px) {
   .navbar-brand {
@@ -485,6 +605,11 @@ img {
   .title-txt {
     margin-left: 0;
     padding: 1em 0 0 0;
+  }
+  #hero-section {
+    background: url(../img/hero_bg_mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
   .nav-recording {
     margin: 0 auto;
@@ -536,6 +661,19 @@ img {
   #footer .footer-social {
     text-align: center;
     margin: 1rem 0;
+  }
+  #survey-section {
+    padding: 1rem;
+  }
+  .survey-txt p {
+    padding: 0;
+  }
+  #survey-options .col {
+    margin: 12px 0;
+  }
+  #survey-options .col-last {
+    max-width: 137px;
+    margin: 0 auto;
   }
 }
 
