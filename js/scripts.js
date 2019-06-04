@@ -19,12 +19,13 @@ var hamburgers = document.querySelectorAll(".hamburger");
         }, false);
       });
 }
-$(".btn-record").click(function() { 
-       var btnimg = $("#record-start");
-       var current = btnimg.attr("src");
-       var swap = btnimg.attr("data-swap");     
-     btnimg.attr('src', swap).attr("data-swap",current);   
-});
+//$(".btn-record").click(function() { 
+//       var btnimg = $("#record-start");
+//       var current = btnimg.attr("src");
+//       var swap = btnimg.attr("data-swap");     
+//     btnimg.attr('src', swap).attr("data-swap",current);   
+//});
 $(".btn-record").click(function () {
     ($(".record-btn-txt").text() == "Record") ? $(".record-btn-txt").text("Stop") : $(".record-btn-txt").text("Record");
+    $(this).toggleClass('recording')
 });

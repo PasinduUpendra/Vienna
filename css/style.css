@@ -308,7 +308,7 @@ img {
 }
 #hero-section {
     text-align: center;
-    min-height: 90vh;
+    min-height: 700px;
 }
 #hero-section h1 {
     color: #45474b;
@@ -316,6 +316,7 @@ img {
     letter-spacing: 1.5px;
     font-size: 3.2em;
     margin-bottom: 2vh;
+    line-height: 1em;
 }
 #hero-section h3 {
   font-size: 1.4em;
@@ -331,7 +332,7 @@ img {
 .scroll-section {
     position: absolute;
     width: 100%;
-    bottom: 17%;
+    bottom: 4%;
     left: 0;
     text-align: center;
 }
@@ -350,7 +351,8 @@ img {
   text-align: center;
 }
 .section-2-col img {
-    margin-right: -18px;
+    margin-right: -15px;
+    max-width: 80%;
 }
 .section-2-col h3 {
     font-size: 1.35em;
@@ -456,7 +458,13 @@ img {
 }
 #video-screen {
   max-height: 85vh;
+  min-height: 80vh;
   overflow: hidden;
+  background: #6a6a6a;
+}
+#video-screen img {
+  max-width: 60%;
+  margin-top: 10vh;
 }
 .recording-ques {
     width: 100%;
@@ -487,7 +495,18 @@ img {
 .recording-ques ul li span{
   color: #616d76;
 }
-
+@-webkit-keyframes blinker {
+  from {opacity: 1.0;}
+  to {opacity: 0.0;}
+}
+.recording img{
+  text-decoration: blink;
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: 0.6s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:ease-in-out;
+  -webkit-animation-direction: alternate;
+}
 /********** Survey ************/
 #survey {
   background: url(../img/survey_bg.png);
@@ -560,6 +579,12 @@ img {
   background: #7acbe2;
   border-color: #7acbe2;
 }
+.w-20 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
 .survey-icons {
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -599,17 +624,23 @@ img {
 
 /************  Extra small devices (portrait phones, less than 576px) ************/
 @media (max-width: 575.98px) {
-  .navbar-brand {
-    margin: 0 auto;
-  }
   .title-txt {
     margin-left: 0;
     padding: 1em 0 0 0;
   }
+  .hero-contents {
+    min-height: 600px;
+  }
   #hero-section {
     background: url(../img/hero_bg_mobile.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 420px 600px;
+    background-position: top center;
+    max-height: 680px;
+  }
+  .scroll-section {
+    top: 538px;
+    bottom: unset;
   }
   .nav-recording {
     margin: 0 auto;
@@ -630,7 +661,12 @@ img {
     border-radius: 20px;
   }
   #video-screen {
-    max-height: unset;
+    max-height: 62vh;
+    min-height: 60vh;
+  }
+  #video-screen img {
+      max-width: 60%;
+      margin-top: 30%;
   }
   .recording-ques ul {
     text-align: left;
@@ -668,30 +704,68 @@ img {
   .survey-txt p {
     padding: 0;
   }
-  #survey-options .col {
-    margin: 12px 0;
-  }
   #survey-options .col-last {
-    max-width: 137px;
     margin: 0 auto;
   }
-  .wow {
-    visibility: visible;
+  .w-20 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1.2rem;
+  }
+  #survey-options {
+    max-width: 80%;
   }
 }
 
 /************ Small devices (landscape phones, 576px and up) ************/
 @media (min-width: 576px) and (max-width: 767.98px) { ... }
-
+  #survey-options {
+    max-width: 100%;
+  }
 /************ Medium devices (tablets, 768px and up) ************/
 @media (min-width: 768px) and (max-width: 991.98px) { 
   .nav-title {
     width: auto !important;
   }
+  #survey-options {
+    max-width: 100%;
+  }
+  #hero-section {
+    min-height: 700px;
+  }
+  #top-section {
+    background-size: 1200px 900px;
+  }
+  .scroll-section {
+    bottom: unset;
+    top: 510px;
+  }
 }
 
 /************ Large devices (desktops, 992px and up) ************/
-@media (min-width: 992px) and (max-width: 1199.98px) { ... }
-
-/************ Extra large devices (large desktops, 1200px and up) ************/
-@media (min-width: 1200px) { ... }
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+  .scroll-section {
+    bottom: 25%;
+  }
+}
+/************ Large devices (desktops, 1120px and up) ************/
+@media (min-width: 1120px) and (max-width: 1199.00px) { 
+  .scroll-section {
+    bottom: 14%;
+  }
+}
+/************ Large devices (desktops, 1200px and up) ************/
+@media (min-width: 1200px) and (max-width: 1559.00px) { 
+  .scroll-section {
+    bottom: 4%;
+  }
+}
+/************ Extra large devices (large desktops, 1560px and up) ************/
+@media (min-width: 1560px) { 
+  .scroll-section {
+    bottom: 2%;
+  }
+}
