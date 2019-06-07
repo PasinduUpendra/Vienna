@@ -118,6 +118,7 @@ img {
 .nav-profile {
     position: relative;
     margin-top: 1rem;
+    z-index: 999;
 }
 .profile-img {
     position: absolute;
@@ -631,10 +632,13 @@ img {
   .hero-contents {
     min-height: 600px;
   }
+  #top-section {
+    background-size: 0;
+  }
   #hero-section {
     background: url(../img/hero_bg_mobile.png);
     background-repeat: no-repeat;
-    background-size: 420px 600px;
+    background-size: 570px 600px;
     background-position: top center;
     max-height: 680px;
   }
@@ -719,12 +723,33 @@ img {
     max-width: 80%;
   }
 }
-
+@media (max-width: 575px) {
+  button.navbar-toggler {
+    position: absolute;
+    right: 10px;
+    top: 25px;
+  }
+}
 /************ Small devices (landscape phones, 576px and up) ************/
-@media (min-width: 576px) and (max-width: 767.98px) { ... }
+@media (min-width: 576px) and (max-width: 767.98px) { 
   #survey-options {
     max-width: 100%;
   }
+  #top-section {
+    background-size: 1200px 1025px;
+  }
+  button.navbar-toggler {
+    position: absolute;
+    right: 10px;
+    top: 25px;
+  }
+  .nav-title {
+    min-width: 100%;
+  }
+  #scroll-section {
+    display: none;
+  }
+}
 /************ Medium devices (tablets, 768px and up) ************/
 @media (min-width: 768px) and (max-width: 991.98px) { 
   .nav-title {
@@ -742,13 +767,17 @@ img {
   .scroll-section {
     bottom: unset;
     top: 510px;
+    display: none;
+  }
+  .nav-title {
+    margin-right: auto!important;
   }
 }
 
 /************ Large devices (desktops, 992px and up) ************/
 @media (min-width: 992px) and (max-width: 1199.98px) { 
   .scroll-section {
-    bottom: 25%;
+    bottom: 5%;
   }
 }
 /************ Large devices (desktops, 1120px and up) ************/
